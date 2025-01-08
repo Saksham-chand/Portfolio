@@ -1,0 +1,480 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure the content in sections does not overflow */
+section {
+    overflow: hidden;
+}
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+}
+
+/* Body Styling */
+body {
+    color: #d4d4d4;
+    background-color: #1c1f21;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(28, 31, 33, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Portfolio Logo style */
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Navbar styling */
+.navbar a {
+    display: inline-block;
+    font-size: 20px;
+    color: #d4d4d4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+/* Navbar hover style */
+.navbar a:hover {
+    color: #e5b567;
+}
+
+/* Home Section Styling */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("Portfolio.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10%;
+}
+
+/* Home page content style according to heading size and paragraph */
+.home-content {
+    text-align: center;
+    color: #e5b567;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.home-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: whitesmoke;
+}
+
+/* LinkedIn and GitHub buttons */
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    margin: 10px 5px;
+}
+
+.home-sci a:hover {
+    background: white;
+    color: grey;
+    box-shadow: 0 0 20px grey;
+}
+
+/* Button box */
+.btn-box {
+    display: inline-block;
+    padding: 12px 20px;
+    background: grey;
+    border-radius: 40px;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px 5px; /* Added margin for spacing */
+}
+
+.btn-box:hover {
+    background: grey;
+    color: black;
+    box-shadow: 0 0 20px white;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: auto;
+    background: url('About.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* This creates the scrolling effect */
+    position: relative;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1500px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for readability */
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-Problem-Solver {
+    flex: 1;
+    text-align: center;
+    max-width: 1500px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-Problem-Solver h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.about-Problem-Solver p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-Tech-Enthusiast {
+    flex: 1;
+    text-align: center;
+    max-width: 1500px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-Tech-Enthusiast h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.about-Tech-Enthusiast p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Hover Icons Styling */
+.hover-icons {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hover-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.hover-icons a:hover {
+    transform: scale(1); /* Enlarge icon on hover */
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Show icons when hovering over the about text section */
+.about-Problem-Solver:hover .hover-icons {
+    display: inline-block; /* Show icons on hover */
+}
+
+.about-Tech-Enthusiast:hover .hover-icons {
+    display: inline-block; /* Show icons on hover */
+}
+
+/* Education Section */
+
+.education {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: auto;
+    background: url('Education.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* This creates the scrolling effect */
+    position: relative;
+}
+
+.education-content {
+    display: flex;
+    max-width: 1500px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for readability */
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.education-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff; /* Ensures readability on dark backgrounds */
+}
+
+.education-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for the image */
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    height: auto;
+    background: url('Projects.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Creates the scrolling effect */
+    position: relative;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: column; /* Align projects vertically */
+    align-items: center; /* Center projects horizontally */
+    max-width: 1500px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 30px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.projects-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white; /* Ensures readability on dark backgrounds */
+}
+
+.projects-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white; /* Ensures readability on dark backgrounds */
+}
+
+.projects-content p {
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+}
+
+.projects-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for the image */
+}
+
+/* Hover effect for project items */
+.projects-Doctors-App:hover .hover-icons,
+.projects-SIC-XE-assembler:hover .hover-icons {
+    display: inline-block; /* Show icons on hover */
+}
+
+.hover-icons {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.hover-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 2rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.hover-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Ensures projects are stacked vertically */
+.projects-Doctors-App,
+.projects-SIC-XE-assembler {
+    width: 100%; /* Make sure both project sections take full width */
+}
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: url('Skills.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax scrolling effect */
+    position: relative;
+    min-height: 100vh; /* Ensures it fills the viewport height */
+    color: white;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center horizontally */
+    max-width: 1200px; /* Restrict content width for better layout */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker background for better contrast */
+    padding: 30px;
+    border-radius: 15px;
+    gap: 20px; /* Space between elements */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Depth effect */
+}
+
+.skills-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f3f3f3; /* Slightly off-white for a softer look */
+}
+
+.skills-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f3f3f3;
+}
+
+.skills-content p,
+.skills-content pre {
+    font-size: 1.5rem;
+    line-height: 1.6; /* Improves readability */
+    padding: 10px;
+    margin: 0;
+    color: #dcdcdc; /* Softer white for paragraphs */
+}
+
+.skills-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.skills-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect for the image */
+}
+
+/* Contact info */
+/* Initial hidden state for the contact info */
+.contact-info {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px; /* Adjust this to position it correctly */
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark background for the contact info */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for effect */
+}
+
+/* Hover effect for the contact link */
+.contact-link:hover + .contact-info {
+    display: block; /* Show the contact info when hovering over the link */
+}
+
+/* Optional: Styling for the contact link */
+.contact-link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #00bcd4; /* Highlight the link on hover */
+}
