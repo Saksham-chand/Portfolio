@@ -360,7 +360,10 @@ body {
 
 /* Hover effect for project items */
 .projects-Doctors-App:hover .hover-icons,
-.projects-SIC-XE-assembler:hover .hover-icons {
+.projects-SIC-XE-assembler:hover .hover-icons,
+.projects-Calculator-Using-Swing:hover .hover-icons,
+.projects-Phases-of-Compiler:hover .hover-icons,
+.projects-Deadlock-detection:hover .hover-icons {
     display: inline-block; /* Show icons on hover */
 }
 
@@ -384,7 +387,10 @@ body {
 
 /* Ensures projects are stacked vertically */
 .projects-Doctors-App,
-.projects-SIC-XE-assembler {
+.projects-SIC-XE-assembler,
+.projects-Calculator-Using-Swing,
+.projects-Phases-of-Compiler,
+ .projects-Deadlock-detection{
     width: 100%; /* Make sure both project sections take full width */
 }
 /* Skills Section */
